@@ -1,7 +1,17 @@
-﻿namespace LocadoraDeVeículos.Model
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace LocadoraDeVeículos.Model
 {
-    public class PessoaFisica : Cliente
+    internal class PessoaFisica : Cliente
     {
-        public DateTime DataNascimento { get; set; }
+        private int CPF;
+
+        public void CadastrarPF(int CPF, string nome)
+        {
+            this.CPF = CPF;
+            this.Nome = nome;
+        }
     }
 }

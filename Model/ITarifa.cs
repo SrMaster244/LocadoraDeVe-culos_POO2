@@ -1,7 +1,12 @@
-﻿namespace LocadoraDeVeículos.Model
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace LocadoraDeVeículos.Model
 {
-    public interface ITarifa
+    internal interface ITarifa
     {
-        decimal Calcular(int dias);
+        public double Calcular(int dias);
+            
     }
 }

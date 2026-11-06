@@ -6,6 +6,7 @@ namespace LocadoraDeVeículos.Model
 {
     internal class PagCard : Pagamento
     {
-
+        int NumCard;
+        int CPF;
     }
 }
