@@ -1,15 +1,18 @@
-﻿namespace LocadoraDeVeículos.Model
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace LocadoraDeVeículos.Model
 {
-    public class Contrato
+    internal class Contrato 
     {
-        public int Id { get; set; }
-        public int ClienteId { get; set; }
-        public Cliente Cliente { get; set; } = null!;
-        public int VeiculoId { get; set; }
-        public Veiculo Veiculo { get; set; } = null!;
-        public DateTime DiaRetirada { get; set; }
-        public DateTime DiaDevolucao { get; set; }
-        public string MetodoPagamento { get; set; } = string.Empty;
-        public decimal ValorFinal { get; set; }
+        public int ClienteID;
+        public Cliente cliente;
+
+        public int VeiculoID;
+        public Veiculo veiculo;
+
+        public List<Pagamento> Pagamentos {  get; set; }
+
     }
 }

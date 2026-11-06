@@ -1,6 +1,13 @@
-﻿using System.Windows;
-using LocadoraDeVeículos.Controller;
-using LocadoraDeVeículos.Data;
+﻿.using System.Text;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
 
 namespace LocadoraDeVeículos
 {
@@ -12,17 +19,6 @@ namespace LocadoraDeVeículos
         public MainWindow()
         {
             InitializeComponent();
-            Session = new LocacaoSession();
-            Controller = new LocacaoController(Session, new LocadoraDbContext());
-            NavegarParaCadastro();
         }
-
-        public LocacaoSession Session { get; }
-        public LocacaoController Controller { get; }
-
-        public void NavegarParaCadastro() => navigationHost.Content = new TelaCadastroView(this);
-        public void NavegarParaVeiculo() => navigationHost.Content = new TelaVeiculoView(this);
-        public void NavegarParaPagamento() => navigationHost.Content = new TelaPagamentoView(this);
-        public void NavegarParaSucesso(int idContrato) => navigationHost.Content = new TelaSucessoView(this, idContrato);
     }
 }
