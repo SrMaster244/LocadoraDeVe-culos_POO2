@@ -1,0 +1,10 @@
+<UserControl x:Class="LocadoraDeVeículos.TelaSucessoView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid Margin="40">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock x:Name="lblMensagemSucesso" FontSize="24" FontWeight="Bold" TextAlignment="Center" Margin="0,0,0,35"/>
+            <Button x:Name="btnNovaOperacao" Content="INICIAR NOVA OPERAÇÃO" Width="250" Height="42" HorizontalAlignment="Center" Click="BtnNovaOperacao_Click"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
