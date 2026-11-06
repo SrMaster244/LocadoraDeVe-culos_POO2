@@ -1,6 +1,7 @@
 ﻿using System.Configuration;
 using System.Data;
 using System.Windows;
+using LocadoraDeVeículos.Model;
 
 namespace LocadoraDeVeículos
 {
@@ -9,6 +10,11 @@ namespace LocadoraDeVeículos
     /// </summary>
     public partial class App : Application
     {
+        Carro carro1 = new Carro();
+        
+        
+
+        
     }
 
 }
