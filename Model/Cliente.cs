@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace LocadoraDeVeículos.Model
+﻿namespace LocadoraDeVeículos.Model
 {
-    internal class Cliente
+    public abstract class Cliente
     {
-        public string Nome;
-
+        public int Id { get; set; }
+        public string Nome { get; set; } = string.Empty;
+        public string Documento { get; set; } = string.Empty;
+        public string Email { get; set; } = string.Empty;
+        public string Cep { get; set; } = string.Empty;
+        public DateTime DataRegistro { get; set; } = DateTime.Now;
     }
 }

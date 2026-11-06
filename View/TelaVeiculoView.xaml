@@ -1,0 +1,23 @@
+<UserControl x:Class="LocadoraDeVeículos.TelaVeiculoView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid Margin="40">
+        <Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/><RowDefinition Height="*"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
+        <TextBlock Text="VEÍCULO" FontSize="30" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,25"/>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,15">
+            <TextBlock Text="Filtro:" VerticalAlignment="Center" Margin="0,0,15,0"/>
+            <RadioButton x:Name="rdbTodos" Content="Todos" IsChecked="True" GroupName="Filtro" Checked="FiltroChanged" Margin="0,0,15,0"/>
+            <RadioButton x:Name="rdbCarros" Content="Carros" GroupName="Filtro" Checked="FiltroChanged" Margin="0,0,15,0"/>
+            <RadioButton x:Name="rdbMotos" Content="Motos" GroupName="Filtro" Checked="FiltroChanged"/>
+        </StackPanel>
+        <DataGrid x:Name="grdVeiculos" Grid.Row="2" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single" Margin="0,0,0,20">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Modelo" Binding="{Binding Modelo}" Width="*"/>
+                <DataGridTextColumn Header="Marca" Binding="{Binding Marca}" Width="*"/>
+                <DataGridTextColumn Header="Ano" Binding="{Binding Ano}" Width="*"/>
+                <DataGridTextColumn Header="Valor Diária" Binding="{Binding ValorDiaria, StringFormat={}{0:C2}}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="btnConfirmarEscolha" Grid.Row="3" Content="CONFIRMAR ESCOLHA" Width="220" Height="38" HorizontalAlignment="Center" Click="BtnConfirmarEscolha_Click"/>
+    </Grid>
+</UserControl>

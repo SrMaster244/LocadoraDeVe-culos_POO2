@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace LocadoraDeVeículos.Model
+﻿namespace LocadoraDeVeículos.Model
 {
-    internal class Carro : Veiculo , ITarifa
+    public class Carro : Veiculo, ITarifa
     {
-        public double Calcular(int dias)
+        public decimal Calcular(int dias)
     {
-            return this.precoDia * dias; 
+            return ValorDiaria * dias;
     }
-   
     }
 }
